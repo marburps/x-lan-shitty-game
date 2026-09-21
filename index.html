@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xlan shitgame</title>
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; background: #000; overflow: hidden; }
+        #stage { display: block; width: 100%; height: 100%; }
+        #stage svg { display: block; width: 100%; height: 100%; }
+        #bowel {
+            position: fixed;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 10;
+            pointer-events: none;
+            user-select: none;
+        }
+        #bowel-label,
+        #bowel-hint {
+            font: 10px/1.3 Consolas, monospace;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+        }
+        #bowel-hint { color: #ffd27a; visibility: hidden; }
+        #bowel-track {
+            width: 14px;
+            height: 170px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 7px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+        #bowel-fill {
+            width: 100%;
+            height: 0%;
+            background: linear-gradient(to top, #6b4a2b, #8a5a2b);
+            transition: height 0.2s linear;
+        }
+        #bowel-fill.full {
+            background: linear-gradient(to top, #8a5a2b, #ffd27a);
+            box-shadow: 0 0 8px rgba(255, 210, 122, 0.8);
+        }
+        #hud {
+            position: fixed;
+            top: 10px;
+            left: 12px;
+            display: flex;
+            gap: 14px;
+            padding: 5px 10px;
+            font: 11px/1.4 Consolas, monospace;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 10;
+        }
+        #total {
+            position: fixed;
+            top: 10px;
+            right: 12px;
+            padding: 5px 10px;
+            font: 11px/1.4 Consolas, monospace;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 10;
+            text-align: right;
+        }
+        #total-label {
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+        }
+        #total-value { font-size: 16px; font-weight: bold; color: #ffd27a; }
+#rules {
+            position: fixed;
+            left: 12px;
+            top: 44px;
+            padding: 10px 12px;
+            font: 13px/1.7 Consolas, monospace;
+            color: rgba(255, 255, 255, 0.75);
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 6px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 10;
+            max-width: 330px;
+        }
+        #rules-title { font-size: 14px; font-weight: bold; letter-spacing: 1px; color: #ffd27a; }
+        #over {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 20;
+            cursor: pointer;
+        }
+        #over.show { display: flex; }
+        #over-box { text-align: center; font-family: Consolas, monospace; color: #fff; }
+        #over-title { font-size: 44px; font-weight: bold; letter-spacing: 6px; }
+        #over-sub { font-size: 16px; margin-top: 10px; color: rgba(255, 255, 255, 0.85); }
+        #over-hint { font-size: 12px; margin-top: 24px; color: rgba(255, 255, 255, 0.5); }
+    </style>
+</head>
+<body>
+    <div id="hud">
+        <span>move: WASD / arrows / left stick</span>
+        <span id="hud-pad">controller: none</span>
+        <span id="hud-time">time 0.0s</span>
+        <span id="hud-enemy">/3!F! @ 0.50x</span>
+        <span id="hud-score">score 0</span>
+    </div>
+    <div id="total">
+        <div id="total-label">total score</div>
+        <div id="total-value">0.0</div>
+    </div>
+    <div id="rules">
+        <div id="rules-title">rules</div>
+        <div>survive /3!F! — he gets angry when close</div>
+        <div>total = doody score + ½ × time survived</div>
+        <div>+50 per doody · +5 per footstep</div>
+        <div>−50 if he sweeps a doody clean</div>
+        <div>space / R2: drop a doody when bowel is full</div>
+        <div>close to you: he thruds through, spreading footsteps</div>
+        <div>far from you: he stops and sweeps it clean</div>
+        <div>x-lan burger: every 30s at the kitchen — hold 1s, bowel fills in 3s</div>
+        <div>WASD / arrows / left stick · click to restart</div>
+    </div>
+    <div id="bowel">
+        <div id="bowel-hint">R2 / space<br>lay doody</div>
+        <div id="bowel-track"><div id="bowel-fill"></div></div>
+        <div id="bowel-label">bowel</div>
+    </div>
+    <div id="stage"></div>
+    <div id="over">
+        <div id="over-box">
+            <div id="over-title">CAUGHT!</div>
+            <div id="over-sub">survived 0.0s</div>
+            <div id="over-hint">click to restart</div>
+        </div>
+    </div>
+    <script src="game.js?v=2"></script>
+</body>
+</html>

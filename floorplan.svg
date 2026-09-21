@@ -1,0 +1,365 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 332" preserveAspectRatio="xMidYMin" xmlns:bx="https://boxy-svg.com" width="80%" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo3OWUyYjFlMS02NmJkLTRmOGUtYWM4MC03YWIyMDVjYmNlOTgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGVTMrYg56bx1/81chFnV7sAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxOTdiNDg5OS1lNWYzLTRlYWYtOGMzNC04ZmIxMmZmNzlmZWZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqfuOAttZ6K35tSUNJ2XYVgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggu0yfHl5jQUH4DJ4HNm4a0Y4EVif6QOGVdeQ6Ojm5GxWkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaH1mMiRujYIUrEZaxC4E10YAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDSTE0fZgs6epQATAIuWv71ovsK3X+7HPsDLeNyrMT5+WRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjc5ZTJiMWUxLTY2YmQtNGY4ZS1hYzgwLTdhYjIwNWNiY2U5OC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjc4MDRkNzJhLTZjODItNDcyZS1iYWQyLTVhMGU4NWNiNGYzMnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC7TJ8eXmNBQfgMngc2bhrRjgRWJ/pA4ZV15Do6ObkbFaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggTRNpbBqqbhmqwTkOXTOTK0IJKaFUVncC5z/fePiTmgWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQV+0Wj7IUiTd8BVykjfJkgDxnK/4rwGzJ3ut2IxS8T10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEC8/EIGo9lCWA+QNN5XxiX9ADWXuq9xGzRG8uRdPm992eFYcsXr6hoP3yoH2PhV7LF3b5DwdWQFO0JrALXgQTg=</c2pa:manifest></metadata>
+    <style>
+        /* ──────────── Master variable control for seat positions ───────────── */
+        /* Adjust in the chrome dev tools and then update the values accordingly */
+        :root {
+            --seat-width: 17px;
+            --seat-height: 12px;
+            --row-gap: 15px;
+            --initial-horizontal-row-x: 184px;
+            --initial-horizontal-row-y: 212px;
+            --initial-vertical-row-x: 420px;
+            --initial-vertical-row-y: 233px;
+            --vertical-row-rotation: 82deg;
+            --vertical-row-skew: -8deg;
+            --clan-legend-x: 9px;
+            --clan-legend-y: 20px;
+            --clan-legend-rotation: 0deg;
+            --clan-legend-skew: 0deg;
+
+            /* ──────── 3D perspective control for the WHOLE seating layout ────────
+               This tilts all the seats/tables together as one rigid "sheet" so they
+               recede into the room the same way the photo/floorplan image does.
+               Tune these 6 values (live, in devtools) until the grid lines up with
+               the room's vanishing point, then copy the final numbers back here. */
+
+            /* Smaller = stronger/more dramatic perspective (things shrink faster
+               with distance). Larger = flatter, more "orthographic" look.
+               Typical range for a room like this: 400px - 2000px. */
+            --seats-perspective: 900px;
+
+            /* How far the seat-plane is rotated back away from the viewer around
+               the horizontal axis. This is what makes far rows look smaller/
+               closer together than near rows, like a floor receding away from
+               camera. 0deg = no tilt (current flat look), higher = steeper floor. */
+            --seats-tilt-x: 0deg;
+
+            /* Rotation around the vertical axis - use this if the room's floor
+               is also angled left/right (camera not pointed straight at it). */
+            --seats-tilt-y: 0deg;
+
+            /* Rotate the whole seating layout in its own 2D plane (before/after
+               the 3D tilt), useful if the rows need to angle to match a room
+               that's photographed slightly rotated. */
+            --seats-rotate-z: 0deg;
+
+            /* Uniform scale correction, applied after the perspective, in case
+               the tilt makes everything end up too big/small vs. the image. */
+            --seats-scale: 1;
+
+            /* The pivot point (in the SVG's own viewBox units, i.e. 0-500 / 0-332,
+               same coordinate space as the image) that stays fixed in place while
+               everything else tilts around it. Put this at the point in the room
+               that should NOT move - e.g. the front/closest edge of the seating
+               area, or the room's vanishing point. */
+            --seats-pivot-x: 100px;
+            --seats-pivot-y: 130px;
+
+
+            /* below here should not need editing */
+            --row-1-y: var(--initial-horizontal-row-y);
+            --row-2-y: calc(var(--row-1-y) + var(--seat-height));
+            --row-3-y: calc(var(--row-2-y) + var(--seat-height) + var(--row-gap));
+            --row-4-y: calc(var(--row-3-y) + var(--seat-height));
+            --row-5-y: calc(var(--row-4-y) + var(--seat-height) + var(--row-gap));
+            --row-6-y: calc(var(--row-5-y) + var(--seat-height));
+            --row-7-y: calc(var(--row-6-y) + var(--seat-height) + var(--row-gap));
+            --row-8-y: calc(var(--row-7-y) + var(--seat-height));
+            /* Row 9 and 10 are vertical */
+            --row-9-x: var(--initial-vertical-row-x);
+            --row-10-x: calc(var(--initial-vertical-row-x) + var(--seat-height));
+        }
+        /* ───────────────────────────────────────────────────────────────────── */
+
+        /* Perspective for ALL seats/tables, split across two nested groups.
+           The background room photo (the image element) lives outside both
+           of these groups, so it is never affected.
+
+           IMPORTANT: `perspective` only reliably takes effect as a CSS
+           *property* set on a PARENT element - stacking a perspective()
+           *function* inside the same transform list as the rotation (on one
+           single element) is not consistently applied by browsers, so that
+           value ends up doing nothing even though it "looks" valid. Splitting
+           it into an outer "camera" group (perspective) and an inner "tilt"
+           group (the actual 3D rotation) is the pattern that reliably works. */
+        #seats-perspective-camera {
+            transform-box: view-box;
+            perspective: var(--seats-perspective);
+            perspective-origin: var(--seats-pivot-x) var(--seats-pivot-y);
+        }
+        #seats-perspective {
+            transform-box: view-box;
+            transform-origin: var(--seats-pivot-x) var(--seats-pivot-y);
+            transform:
+                rotateX(var(--seats-tilt-x))
+                rotateY(var(--seats-tilt-y))
+                rotateZ(var(--seats-rotate-z))
+                scale(var(--seats-scale));
+            transform-style: preserve-3d;
+        }
+
+        #row-1 { transform: translate(var(--initial-horizontal-row-x), var(--row-1-y)); }
+        #row-2 { transform: translate(var(--initial-horizontal-row-x), var(--row-2-y)); }
+        #row-3 { transform: translate(var(--initial-horizontal-row-x), var(--row-3-y)); }
+        #row-4 { transform: translate(var(--initial-horizontal-row-x), var(--row-4-y)); }
+        #row-5 { transform: translate(var(--initial-horizontal-row-x), var(--row-5-y)); }
+        #row-6 { transform: translate(var(--initial-horizontal-row-x), var(--row-6-y)); }
+        #row-7 { transform: translate(var(--initial-horizontal-row-x), var(--row-7-y)); }
+        #row-8 { transform: translate(var(--initial-horizontal-row-x), var(--row-8-y)); }
+
+        /* Row 9 and 10 are vertical, to keep things simple we are going to rotate them into position */
+        #row-9 {
+            transform-box: fill-box;
+            transform-origin: 0 0;
+            transform: translate(var(--row-9-x), var(--initial-vertical-row-y)) rotate(var(--vertical-row-rotation)) skewX(var(--vertical-row-skew));
+        }
+        #row-10 {
+        transform-box: fill-box;
+        transform-origin: 0 0;
+        transform: translate(var(--row-10-x), var(--initial-vertical-row-y)) rotate(var(--vertical-row-rotation)) skewX(var(--vertical-row-skew));
+
+        }
+
+        svg {
+            font-family:Helvetica,Arial,sans-serif;
+            display: block;
+            margin: auto;
+        }
+        [id^="seat-"] rect {
+            cursor: pointer;
+            transition: fill 0.2s ease;
+            stroke: rgb(0, 0, 0);
+            fill: rgb(255, 255, 255);
+            width: var(--seat-width);
+            height: var(--seat-height);
+            transform: translate(1.93px, -65.35px);
+            transform-origin: 248.058px 232.577px;
+        }
+        [id^="seat-"] text {
+            transition: fill 0.2s ease;
+            width: var(--seat-width);
+            height: var(--seat-height);
+            transform: translate(1.93px, -65.35px);
+            transform-origin: 248px 229px;
+            font-size: 4px;
+        }
+
+        /* ──────────────────────────────────────*/
+        /* Does position of seats based on width */
+        [id^="seat-"] {
+            /* Calculate X: (Index - 1) * Width */
+            --x-pos: calc((var(--i) - 1) * var(--seat-width));
+            transform: translateX(var(--x-pos));
+        }
+        [id^="seat-"]:nth-child(1)  { --i: 1; }
+        [id^="seat-"]:nth-child(2)  { --i: 2; }
+        [id^="seat-"]:nth-child(3)  { --i: 3; }
+        [id^="seat-"]:nth-child(4)  { --i: 4; }
+        [id^="seat-"]:nth-child(5)  { --i: 5; }
+        [id^="seat-"]:nth-child(6)  { --i: 6; }
+        [id^="seat-"]:nth-child(7)  { --i: 7; }
+        [id^="seat-"]:nth-child(8)  { --i: 8; }
+        [id^="seat-"]:nth-child(9)  { --i: 9; }
+        [id^="seat-"]:nth-child(10)  { --i: 10; }
+        [id^="seat-"]:nth-child(11)  { --i: 11; }
+        [id^="seat-"]:nth-child(12)  { --i: 12; }
+        /* ──────────────────────────────────────*/
+
+        rect.selected {
+            fill: #4CAF50 !important; /* green */
+        }
+        rect:hover {
+            stroke: #333;
+            stroke-width: 2;
+        }
+
+        .clan-text {
+            font-size: 10px;
+            fill: black;
+            dominant-baseline: middle;
+            text-anchor: start;
+            cursor: pointer;
+        }
+        .svg-clan-list {
+            transform: translate(var(--clan-legend-x),var(--clan-legend-y)) rotate(var(--clan-legend-rotation)) skewX(var(--clan-legend-skew));
+        }
+
+        .svg-clan-list circle {
+            cursor: pointer;
+            stroke: #000000;
+            stroke-width: 1px;
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+
+        }
+        .svg-clan-list text {
+            font-size:10px;
+            cursor: pointer;
+            transform: translate(40, 90) rotate(-14deg)
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+        }
+
+        .highlight {
+            opacity: 1;
+        }
+        .not-highlight {
+            opacity: 0.4;
+        }
+    </style>
+    <defs>
+        <bx:export>
+            <bx:file format="svg"/>
+        </bx:export>
+    </defs>
+
+    <!-- Background room photo - lives OUTSIDE the perspective group, so it is
+         never transformed. -->
+    <image href="floorplan_sept_2026.png" width="500" height="334.426" x="-57.673" y="-64.287" transform="matrix(1, -0.000076, 0.000076, 1, 57.660289, 64.306002)" style="transform-origin: 192.327px 102.926px;">
+        <title>xlan-zaalplan</title>
+    </image>
+
+    <!-- Everything below (legend + all seat rows) is nested inside two
+         groups: an outer one that owns the `perspective` (the "camera"),
+         and an inner one that does the actual 3D tilt. Together they move
+         as one rigid sheet and match the room's vanishing point. -->
+    <g id="seats-perspective-camera">
+    <g id="seats-perspective">
+
+        <g id="svg-clan-list" class="svg-clan-list"></g>
+        <g id="row-1" class="row">
+            <g id="seat-1" class="seat" data-seatId="1"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-2" class="seat" data-seatId="2"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-3" class="seat" data-seatId="3"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-4" class="seat" data-seatId="4"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-5" class="seat" data-seatId="5"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-6" class="seat" data-seatId="6"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-7" class="seat" data-seatId="7"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-8" class="seat" data-seatId="8"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-9" class="seat" data-seatId="9"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-10" class="seat" data-seatId="10"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-11" class="seat" data-seatId="11"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-12" class="seat" data-seatId="12"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-2" class="row">
+            <g id="seat-13" class="seat" data-seatId="13"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-14" class="seat" data-seatId="14"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-15" class="seat" data-seatId="15"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-16" class="seat" data-seatId="16"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-17" class="seat" data-seatId="17"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-18" class="seat" data-seatId="18"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-19" class="seat" data-seatId="19"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-20" class="seat" data-seatId="20"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-21" class="seat" data-seatId="21"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-22" class="seat" data-seatId="22"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-23" class="seat" data-seatId="23"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-24" class="seat" data-seatId="24"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-3" class="row">
+            <g id="seat-25" class="seat" data-seatId="25"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-26" class="seat" data-seatId="26"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-27" class="seat" data-seatId="27"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-28" class="seat" data-seatId="28"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-29" class="seat" data-seatId="29"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-30" class="seat" data-seatId="30"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-31" class="seat" data-seatId="31"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-32" class="seat" data-seatId="32"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-33" class="seat" data-seatId="33"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-34" class="seat" data-seatId="34"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-35" class="seat" data-seatId="35"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-36" class="seat" data-seatId="36"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-4" class="row">
+            <g id="seat-37" class="seat" data-seatId="37"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-38" class="seat" data-seatId="38"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-39" class="seat" data-seatId="39"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-40" class="seat" data-seatId="40"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-41" class="seat" data-seatId="41"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-42" class="seat" data-seatId="42"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-43" class="seat" data-seatId="43"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-44" class="seat" data-seatId="44"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-45" class="seat" data-seatId="45"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-46" class="seat" data-seatId="46"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-47" class="seat" data-seatId="47"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-48" class="seat" data-seatId="48"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-5" class="row">
+            <g id="seat-49" class="seat" data-seatId="49"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-50" class="seat" data-seatId="50"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-51" class="seat" data-seatId="51"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-52" class="seat" data-seatId="52"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-53" class="seat" data-seatId="53"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-54" class="seat" data-seatId="54"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-55" class="seat" data-seatId="55"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-56" class="seat" data-seatId="56"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-57" class="seat" data-seatId="57"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-58" class="seat" data-seatId="58"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-59" class="seat" data-seatId="59"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-60" class="seat" data-seatId="60"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-6" class="row">
+            <g id="seat-61" class="seat" data-seatId="61"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-62" class="seat" data-seatId="62"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-63" class="seat" data-seatId="63"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-64" class="seat" data-seatId="64"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-65" class="seat" data-seatId="65"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-66" class="seat" data-seatId="66"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-67" class="seat" data-seatId="67"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-68" class="seat" data-seatId="68"><rect/><text x="112.5" y="3.5"></text></g>
+            <g id="seat-69" class="seat" data-seatId="69"><rect/><text x="127.5" y="3.5"></text></g>
+            <g id="seat-70" class="seat" data-seatId="70"><rect/><text x="142.5" y="3.5"></text></g>
+            <g id="seat-71" class="seat" data-seatId="71"><rect/><text x="157.5" y="3.5"></text></g>
+            <g id="seat-72" class="seat" data-seatId="72"><rect/><text x="172.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-7" class="row">
+            <g id="seat-73" class="seat" data-seatId="73"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-74" class="seat" data-seatId="74"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-75" class="seat" data-seatId="75"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-76" class="seat" data-seatId="76"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-77" class="seat" data-seatId="77"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-78" class="seat" data-seatId="78"><rect/><text x="82.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-8" class="row">
+            <g id="seat-79" class="seat" data-seatId="79"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-80" class="seat" data-seatId="80"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-81" class="seat" data-seatId="81"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-82" class="seat" data-seatId="82"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-83" class="seat" data-seatId="83"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-84" class="seat" data-seatId="84"><rect/><text x="82.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-9" class="row">
+            <g id="seat-85" class="seat" data-seatId="85"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-86" class="seat" data-seatId="86"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-87" class="seat" data-seatId="87"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-88" class="seat" data-seatId="88"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-89" class="seat" data-seatId="89"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-90" class="seat" data-seatId="90"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-91" class="seat" data-seatId="91"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-92" class="seat" data-seatId="92"><rect/><text x="112.5" y="3.5"></text></g>
+        </g>
+
+        <g id="row-10" class="row">
+            <g id="seat-93" class="seat" data-seatId="93"><rect/><text x="7.5" y="3.5"></text></g>
+            <g id="seat-94" class="seat" data-seatId="94"><rect/><text x="22.5" y="3.5"></text></g>
+            <g id="seat-95" class="seat" data-seatId="95"><rect/><text x="37.5" y="3.5"></text></g>
+            <g id="seat-96" class="seat" data-seatId="96"><rect/><text x="52.5" y="3.5"></text></g>
+            <g id="seat-97" class="seat" data-seatId="97"><rect/><text x="67.5" y="3.5"></text></g>
+            <g id="seat-98" class="seat" data-seatId="98"><rect/><text x="82.5" y="3.5"></text></g>
+            <g id="seat-99" class="seat" data-seatId="99"><rect/><text x="97.5" y="3.5"></text></g>
+            <g id="seat-100" class="seat" data-seatId="100"><rect/><text x="112.5" y="3.5"></text></g>
+        </g>
+
+    </g>
+    </g>
+
+</svg>
