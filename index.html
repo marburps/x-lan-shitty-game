@@ -48,6 +48,25 @@
             background: linear-gradient(to top, #8a5a2b, #ffd27a);
             box-shadow: 0 0 8px rgba(255, 210, 122, 0.8);
         }
+        #redbull {
+            position: fixed;
+            right: 12px;
+            top: calc(50% + 118px);
+            padding: 5px 10px;
+            font: 11px/1.4 Consolas, monospace;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 10;
+            text-align: center;
+            min-width: 100px;
+        }
+        #redbull-count { font-size: 14px; font-weight: bold; color: #9fd0ff; }
+        #redbull-boost { font-size: 9px; margin-top: 2px; color: rgba(159, 208, 255, 0.7); visibility: hidden; }
+        #redbull-boost.ready, #redbull-boost.active { visibility: visible; }
+        #redbull-boost.active { color: #9fd0ff; }
         #hud {
             position: fixed;
             top: 10px;
@@ -138,12 +157,18 @@
         <div>close to you: he thruds through, spreading footsteps</div>
         <div>far from you: he stops and sweeps it clean</div>
         <div>x-lan burger: every 30s at the kitchen — hold 1s, bowel fills in 3s</div>
+        <div>red-bull at the bar: from 100s, then every 30s — hold 1s to grab</div>
+        <div>chug with R / L2: ×2 speed for 5s (can be stacked)</div>
         <div>WASD / arrows / left stick · click to restart</div>
     </div>
     <div id="bowel">
         <div id="bowel-hint">R2 / space<br>lay doody</div>
         <div id="bowel-track"><div id="bowel-fill"></div></div>
         <div id="bowel-label">bowel</div>
+    </div>
+    <div id="redbull">
+        <div id="redbull-count">red-bull ×0</div>
+        <div id="redbull-boost"></div>
     </div>
     <div id="stage"></div>
     <div id="over">
@@ -153,6 +178,6 @@
             <div id="over-hint">click to restart</div>
         </div>
     </div>
-    <script src="game.js?v=2"></script>
+    <script src="game.js?v=4"></script>
 </body>
 </html>

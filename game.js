@@ -415,6 +415,28 @@
     let burgerTimer = BURGER_INTERVAL_SECONDS;
     let bowelBoost = null;
 
+    const RB_POS = [362, 128];
+    const RB_PICKUP_DIST = 12;
+    const RB_PICKUP_SECONDS = 1;
+    const RB_BOOST_SECONDS = 5;
+    const RB_FIRST_DELAY = 100; // TODO: back to 100 when done debugging
+    const RB_INTERVAL_SECONDS = 30;
+    const rbLayer = el('g', { id: 'rb-layer' });
+    svg.insertBefore(rbLayer, player.g);
+    const rbRingG = el('g', { id: 'rb-ring', visibility: 'hidden' });
+    rbRingG.append(
+        el('circle', { cx: 0, cy: 0, r: 11, fill: 'none', stroke: 'rgba(0,0,0,0.35)', 'stroke-width': 1.4 }),
+        el('circle', { cx: 0, cy: 0, r: 11, fill: 'none', stroke: '#7fb2ff', 'stroke-width': 1.4, 'stroke-linecap': 'round', 'stroke-dasharray': RING_CIRC.toFixed(2), 'stroke-dashoffset': RING_CIRC.toFixed(2) }),
+    );
+    svg.appendChild(rbRingG);
+    const rbRingFg = rbRingG.children[1];
+    let redbull = null;
+    let rbTimer = RB_FIRST_DELAY;
+    let redbullStock = 0;
+    let rbBoostT = 0;
+    let rbL2Prev = false;
+    let rbClipSeq = 0;
+
     const PLAYER_SPAWN = [165, 300];
     const ENEMY_SPAWN = [390, 133];
     const st = {
@@ -458,10 +480,11 @@
     const doo = { laying: false, t: 0 };
     const doodies = [];
     const ENEMY_START_SPEED = MAX_SPEED * 0.5;
+    const ENEMY_TOP_SPEED = MAX_SPEED * 1.05;
     const ENEMY_RAMP_SECONDS = 180;
     function enemySpeed() {
         const t = Math.max(0, ((overAt || performance.now()) - runStart) / 1000);
-        return ENEMY_START_SPEED + ((MAX_SPEED - ENEMY_START_SPEED) / ENEMY_RAMP_SECONDS) * t;
+        return Math.min(ENEMY_TOP_SPEED, ENEMY_START_SPEED + ((ENEMY_TOP_SPEED - ENEMY_START_SPEED) / ENEMY_RAMP_SECONDS) * t);
     }
     let lastPosLog = 0;
     let lastHud = 0;
@@ -473,6 +496,8 @@
     const hudPad = document.getElementById('hud-pad');
     const bowelFill = document.getElementById('bowel-fill');
     const bowelHint = document.getElementById('bowel-hint');
+    const hudRb = document.getElementById('redbull-count');
+    const hudRbBoost = document.getElementById('redbull-boost');
     const overEl = document.getElementById('over');
     const overSub = document.getElementById('over-sub');
     let overAt = 0;
@@ -489,6 +514,7 @@
     let spaceHeld = false;
     window.addEventListener('keydown', (e) => {
         if (e.code === 'Space') { spaceHeld = true; e.preventDefault(); return; }
+        if (e.code === 'KeyR') { if (!e.repeat) consumeRedBull(); return; }
         if (KEYMAP[e.code]) { keys.add(e.code); e.preventDefault(); }
     });
     window.addEventListener('keyup', (e) => {
@@ -513,9 +539,10 @@
             const m = Math.hypot(x, y);
             if (m > 1) { x /= m; y /= m; }
             const r2 = p.buttons[7] && p.buttons[7].value > 0.5 ? 1 : 0;
-            return [x, y, true, r2];
+            const l2 = p.buttons[6] && p.buttons[6].value > 0.5 ? 1 : 0;
+            return [x, y, true, r2, l2];
         }
-        return [0, 0, false, 0];
+        return [0, 0, false, 0, 0];
     }
 
     function readInput() {
@@ -634,6 +661,57 @@
         burger = null;
     }
 
+    function redBullGraphic() {
+        const g = el('g', {});
+        g.append(
+            el('ellipse', { cx: 0, cy: 1.2, rx: 8.5, ry: 7.5, fill: 'rgba(0,0,0,0.32)' }),
+        );
+        const glow = el('circle', { cx: 0, cy: 0, r: 13, fill: '#7fb2ff', 'fill-opacity': 0.16 });
+        g.appendChild(glow);
+        const cpId = 'rb-clip-' + (++rbClipSeq);
+        const cp = el('clipPath', { id: cpId });
+        cp.appendChild(el('circle', { cx: 0, cy: 0, r: 7.5 }));
+        g.appendChild(cp);
+        g.appendChild(el('circle', { cx: 0, cy: 0, r: 7.5, fill: '#dfe3e8', stroke: '#838a94', 'stroke-width': 0.5 }));
+        const clipped = el('g', { 'clip-path': `url(#${cpId})` });
+        clipped.append(
+            el('rect', { x: -9, y: -2.6, width: 18, height: 5.2, fill: '#d42027', transform: 'rotate(-24)' }),
+            el('circle', { cx: 0, cy: 0, r: 7.5, fill: 'none', stroke: '#d42027', 'stroke-width': 1.8 }),
+            el('circle', { cx: 0.4, cy: 0, r: 1.5, fill: '#ffd27a' }),
+            el('ellipse', { cx: 0, cy: -4, rx: 1.5, ry: 0.8, fill: '#aab0b8', stroke: '#7d838c', 'stroke-width': 0.3 }),
+        );
+        g.appendChild(clipped);
+        const tag = el('text', {
+            x: 0, y: -13, 'text-anchor': 'middle',
+            'font-family': 'Consolas, monospace', 'font-size': 6, 'font-weight': 'bold',
+            fill: '#9fd0ff', stroke: 'rgba(0,0,0,0.75)', 'stroke-width': 0.8, 'paint-order': 'stroke',
+        });
+        tag.textContent = 'red-bull';
+        g.appendChild(tag);
+        return { g, glow };
+    }
+
+    function spawnRedBull() {
+        if (redbull) return;
+        const wrap = el('g', { transform: `translate(${RB_POS[0]} ${RB_POS[1]})` });
+        const { g: inner, glow } = redBullGraphic();
+        wrap.appendChild(inner);
+        rbLayer.appendChild(wrap);
+        redbull = { g: wrap, inner, glow, hold: 0 };
+    }
+
+    function removeRedBull() {
+        if (!redbull) return;
+        redbull.g.remove();
+        redbull = null;
+    }
+
+    function consumeRedBull() {
+        if (overAt || redbullStock <= 0) return;
+        redbullStock--;
+        rbBoostT = RB_BOOST_SECONDS;
+    }
+
 function footClear(fx, fy) {
         if (!insideField({ x: fx, y: fy })) return false;
         for (const r of blockRects) {
@@ -692,6 +770,15 @@ function footClear(fx, fy) {
         burgerTimer = BURGER_INTERVAL_SECONDS;
         bowelBoost = null;
         burgerRingG.setAttribute('visibility', 'hidden');
+        removeRedBull();
+        rbTimer = RB_FIRST_DELAY;
+        redbullStock = 0;
+        rbBoostT = 0;
+        rbL2Prev = false;
+        rbRingG.setAttribute('visibility', 'hidden');
+        hudRb.textContent = 'red-bull ×0';
+        hudRbBoost.textContent = '';
+        hudRbBoost.className = '';
         overAt = 0;
         runStart = performance.now();
         hudTime.textContent = 'time 0.0s';
@@ -720,9 +807,14 @@ function footClear(fx, fy) {
     function update(dt) {
         const now = performance.now();
         if (!overAt) {
+            if (rbBoostT > 0) rbBoostT = Math.max(0, rbBoostT - dt);
             if (!burger) {
                 burgerTimer -= dt;
                 if (burgerTimer <= 0) { spawnBurger(); burgerTimer = BURGER_INTERVAL_SECONDS; }
+            }
+            if (!redbull) {
+                rbTimer -= dt;
+                if (rbTimer <= 0) { spawnRedBull(); rbTimer = RB_INTERVAL_SECONDS; }
             }
             const k = 1 - Math.exp(-dt * 10);
             if (doo.laying) {
@@ -737,8 +829,9 @@ function footClear(fx, fy) {
                 }
             } else {
                 const [ix, iy] = readInput();
-                st.vx += (ix * MAX_SPEED - st.vx) * k;
-                st.vy += (iy * MAX_SPEED - st.vy) * k;
+                const pMax = rbBoostT > 0 ? MAX_SPEED * 2 : MAX_SPEED;
+                st.vx += (ix * pMax - st.vx) * k;
+                st.vy += (iy * pMax - st.vy) * k;
                 st.x += st.vx * dt;
                 st.y += st.vy * dt;
                 resolve(st);
@@ -768,6 +861,17 @@ function footClear(fx, fy) {
                 bowel = bowelBoost.from + (1 - bowelBoost.from) * bbk;
                 if (bowelBoost.t >= BOWEL_BOOST_SECONDS) { bowel = 1; bowelBoost = null; }
             }
+            if (redbull) {
+                const dR = Math.hypot(st.x - RB_POS[0], st.y - RB_POS[1]);
+                redbull.hold = dR < RB_PICKUP_DIST ? Math.min(RB_PICKUP_SECONDS, redbull.hold + dt) : 0;
+                if (redbull.hold >= RB_PICKUP_SECONDS) {
+                    redbullStock++;
+                    removeRedBull();
+                }
+            }
+            const gp2 = readGamepad();
+            if (gp2[4] && !rbL2Prev) consumeRedBull();
+            rbL2Prev = !!gp2[4];
 
             const pc = cellAt(st.x, st.y);
             if (now - ENEMY.lastPlan > 400 || pc !== ENEMY.lastCell || ENEMY.path.length === 0) {
@@ -886,6 +990,18 @@ function footClear(fx, fy) {
             burger.inner.setAttribute('transform', `scale(${(1 + 0.035 * Math.sin(bp)).toFixed(4)})`);
             burger.glow.setAttribute('fill-opacity', (0.14 + 0.07 * Math.sin(bp * 0.8)).toFixed(3));
         }
+        if (redbull && redbull.hold > 0 && !doo.laying) {
+            rbRingG.setAttribute('visibility', 'visible');
+            rbRingG.setAttribute('transform', `translate(${st.x.toFixed(2)} ${st.y.toFixed(2)}) rotate(-90)`);
+            rbRingFg.setAttribute('stroke-dashoffset', (RING_CIRC * (1 - Math.min(1, redbull.hold / RB_PICKUP_SECONDS))).toFixed(2));
+        } else {
+            rbRingG.setAttribute('visibility', 'hidden');
+        }
+        if (redbull) {
+            const rp = now * 0.004;
+            redbull.inner.setAttribute('transform', `scale(${(1 + 0.035 * Math.sin(rp)).toFixed(4)})`);
+            redbull.glow.setAttribute('fill-opacity', (0.14 + 0.07 * Math.sin(rp * 0.8)).toFixed(3));
+        }
         const espeed = Math.hypot(ENEMY.vx, ENEMY.vy);
         animChar(enemyC, ENEMY, espeed, dt);
         if (enemyC.angerG) {
@@ -921,6 +1037,17 @@ function footClear(fx, fy) {
             bowelFill.style.height = `${(bowel * 100).toFixed(1)}%`;
             bowelFill.classList.toggle('full', bowel >= 1);
             bowelHint.style.visibility = bowel >= 1 ? 'visible' : 'hidden';
+            hudRb.textContent = `red-bull ×${redbullStock}`;
+            if (rbBoostT > 0) {
+                hudRbBoost.textContent = `×2 speed ${rbBoostT.toFixed(1)}s`;
+                hudRbBoost.className = 'active';
+            } else if (redbullStock > 0) {
+                hudRbBoost.textContent = 'R / L2 to chug';
+                hudRbBoost.className = 'ready';
+            } else {
+                hudRbBoost.textContent = '';
+                hudRbBoost.className = '';
+            }
         }
 
         const g = readGamepad();
@@ -981,6 +1108,13 @@ function footClear(fx, fy) {
         get burgerTimer() { return burgerTimer; },
         spawnBurger: () => spawnBurger(),
         removeBurger: () => removeBurger(),
+        get redBull() { return redbull ? { x: RB_POS[0], y: RB_POS[1], hold: redbull.hold } : null; },
+        get redBullStock() { return redbullStock; },
+        get redBullTimer() { return rbTimer; },
+        get rbBoost() { return rbBoostT; },
+        spawnRedBull: () => spawnRedBull(),
+        removeRedBull: () => removeRedBull(),
+        consumeRedBull: () => consumeRedBull(),
         get doo() { return { laying: doo.laying, t: doo.t }; },
         get dooCount() { return dooG.childElementCount; },
         get doodyCount() { return doodies.filter((d) => d.alive).length; },
